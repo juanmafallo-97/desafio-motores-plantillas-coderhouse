@@ -1,0 +1,18 @@
+html 
+    head
+        link(rel="preconnect", href="https://fonts.googleapis.com")
+        link(rel="preconnect", href="https://fonts.gstatic.com",crossorigin) 
+        link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap", rel="stylesheet")
+        link(rel="stylesheet", href="./index.css") 
+        title='Pug'
+    body
+        h1 Productos
+        div(class="productos-container")
+            if hayProductos
+                each producto in productos
+                     div(class="producto")
+                        h2= producto.title
+                        h2 Precio: #{producto.precio} 
+                        img(src=producto.thumbnail)
+            else     
+                h2 No hay productos

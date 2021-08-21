@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %> 
+</head>
+<body>
+    <h1>Productos</h1>
+<div class="productos-container">
+  <% if (hayProductos) { %>
+    <% productos.forEach(function(producto){ %>
+      <div class="producto">
+        <h2><%= producto.title %> </h2>
+        <h3>Precio: $ <%= producto.price %></h3>
+        <img src= <%= producto.thumbnail %> />
+      </div>
+    <% }); %>
+  <%} else { %>
+    <h2>No hay productos</h2>
+  <%}%>
+</div>
+</body>
+</html>
