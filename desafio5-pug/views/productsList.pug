@@ -6,6 +6,10 @@ html
         link(rel="stylesheet", href="./index.css") 
         title='Pug'
     body
+        header
+            nav
+                a(href="/") Cargar producto
+                a(href="/productos") Lista de productos
         h1 Productos
         div(class="productos-container")
             if hayProductos
